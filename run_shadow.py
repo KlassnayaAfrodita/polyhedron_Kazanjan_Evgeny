@@ -11,8 +11,9 @@ try:
         print("=============================================================")
         print(f"Начало работы с полиэдром '{name}'")
         start_time = time()
-        Polyedr(f"data/{name}.geom").draw(tk)
-        print(f'Сумма проекций равна {Polyedr.sum_projection()}')
+        polyedr = Polyedr(f"data/{name}.geom")
+        polyedr.draw(tk)
+        print(f'Сумма проекций равна {polyedr.sum_projection()}')
         delta_time = time() - start_time
         print(f"Изображение полиэдра '{name}' заняло {delta_time} сек.")
         input("Hit 'Return' to continue -> ")
