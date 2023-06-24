@@ -13,19 +13,20 @@ class TestR3:
 class Test_1:
     def test_good_point1(self):
         f = R3(0.5, 0.8, 0)
-        assert f.is_good_point() == False
-    
+        assert not f.is_good_point() is True
+
     def test_good_point2(self):
         f = R3(1, 1, 1)
-        assert f.is_good_point() == True
+        assert f.is_good_point() is True
 
     def test_lenght_projection1(self):
-        f = Edge(R3(5, 6 , 0), R3(34, 7, 3))
+        f = Edge(R3(5, 6, 0), R3(34, 7, 3))
         assert f.projection_lenght() == approx(29.01, 0.03)
 
     def test_lenght_projection2(self):
-        f = Edge(R3(5, 6 , 0), R3(5, 6, 0))
+        f = Edge(R3(5, 6, 0), R3(5, 6, 0))
         assert f.projection_lenght() == 0
+
 
 class Test_sum:
     def test1(self):
@@ -35,6 +36,11 @@ class Test_sum:
     def test2(self):
         Polyedr2 = Polyedr("test_tri.geom")
         assert Polyedr2.sum_projection() == approx(0.71, 0.03)
+
+    def test3(self):
+        Polyedr3 = Polyedr("data/king.geom")
+        assert Polyedr3.sum_projection() == approx(11589.53, 0.03)
+
     
     def test3(self):
         Polyedr3 = Polyedr("data/king.geom")
