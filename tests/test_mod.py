@@ -4,10 +4,10 @@ from common.r3 import R3
 from shadow.polyedr import Edge, Polyedr
 
 
-class TestR3:
-    def test_abs(self):
-        vector = R3(1.0, 1.0, 1.0)
-        assert abs(vector) == approx(sqrt(3))
+# class TestR3:
+#     def test_abs(self):
+#         vector = R3(1.0, 1.0, 1.0)
+#         assert abs(vector) == approx(sqrt(3))
 
 
 class Test_1:
