@@ -40,8 +40,3 @@ class Test_sum:
     def test3(self):
         Polyedr3 = Polyedr("data/king.geom")
         assert Polyedr3.sum_projection() == approx(11589.53, 0.03)
-
-    
-    def test3(self):
-        Polyedr3 = Polyedr("data/king.geom")
-        assert Polyedr3.sum_projection() == approx(11589.53, 0.03)
