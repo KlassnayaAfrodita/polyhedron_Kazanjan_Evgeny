@@ -30,11 +30,11 @@ class Test_1:
 
 class Test_sum:
     def test1(self):
-        Polyedr1 = Polyedr("test_pir.geom")
+        Polyedr1 = Polyedr("data/test_pir.geom")
         assert Polyedr1.sum_projection() == approx(10.19, 0.03)
 
     def test2(self):
-        Polyedr2 = Polyedr("test_tri.geom")
+        Polyedr2 = Polyedr("data/test_tri.geom")
         assert Polyedr2.sum_projection() == approx(0.71, 0.03)
 
     def test3(self):
